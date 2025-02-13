@@ -1,0 +1,36 @@
+<link rel="stylesheet" href="styles.css">
+/* This is a comment in CSS */
+
+/* Apply styles to the whole page */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the header */
+header {
+    background: white;
+    text-align: center;
+    padding: 50px;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+/* Style all buttons */
+button {
+    background: #444;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Change button color when hovered */
+button:hover {
+    background: #222;
+}
+
