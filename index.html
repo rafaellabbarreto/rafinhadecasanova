@@ -8,7 +8,7 @@
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap');
-        <script src="script.js"></script>
+
 
         body {
             font-family: 'Poppins', sans-serif;
@@ -144,25 +144,25 @@
 
     <script>
         const productsData = [...Array(10)].map((_, i) => ({
-            name: Produto ${i + 1},
+            name: `Produto ${i + 1}`,  // ✅ Now it works correctly!
             image: "https://via.placeholder.com/300",
             price: (500 + i * 200)
         }));
 
+
         const productList = document.getElementById("products");
         productsData.forEach(product => {
-            const productElement = document.createElement("div");
-            productElement.classList.add("product");
-            productElement.innerHTML = 
-                <img src="${product.image}" alt="${product.name}">
-                <h3>${product.name}</h3>
-                <p>Valor total: R$${product.price.toLocaleString('pt-BR')}</p>
-                <p><strong>Quanto deseja contribuir?</strong></p>
-                <div class="contribution">
-                    <input type="number" min="10" step="10" placeholder="Valor R$">
-                    <button onclick="redirectToPayment('${product.name}')">Contribuir</button>
-                </div>
-            ;
+            productElement.innerHTML = `
+            <img src="${product.image}" alt="${product.name}">
+            <h3>${product.name}</h3>
+            <p>Valor total: R$${product.price.toLocaleString('pt-BR')}</p>
+            <p><strong>Quanto deseja contribuir?</strong></p>
+            <div class="contribution">
+            <input type="number" min="10" step="10" placeholder="Valor R$">
+            <button onclick="redirectToPayment('${product.name}')">Contribuir</button>
+            </div>
+`;
+
             productList.appendChild(productElement);
         });
 
@@ -174,5 +174,6 @@
             document.getElementById("products").scrollBy({ left: 350, behavior: 'smooth' });
         }
     </script>
+        <script src="script.js"></script>
 </body>
 </html>
