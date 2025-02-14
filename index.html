@@ -141,39 +141,6 @@
     <footer>
         <p>Feito com ❤️ por Rafinha</p>
     </footer>
-
-    <script>
-        const productsData = [...Array(10)].map((_, i) => ({
-            name: `Produto ${i + 1}`,  // ✅ Now it works correctly!
-            image: "https://via.placeholder.com/300",
-            price: (500 + i * 200)
-        }));
-
-
-        const productList = document.getElementById("products");
-        productsData.forEach(product => {
-            productElement.innerHTML = `
-            <img src="${product.image}" alt="${product.name}">
-            <h3>${product.name}</h3>
-            <p>Valor total: R$${product.price.toLocaleString('pt-BR')}</p>
-            <p><strong>Quanto deseja contribuir?</strong></p>
-            <div class="contribution">
-            <input type="number" min="10" step="10" placeholder="Valor R$">
-            <button onclick="redirectToPayment('${product.name}')">Contribuir</button>
-            </div>
-`;
-
-            productList.appendChild(productElement);
-        });
-
-        function scrollLeft() {
-            document.getElementById("products").scrollBy({ left: -350, behavior: 'smooth' });
-        }
-
-        function scrollRight() {
-            document.getElementById("products").scrollBy({ left: 350, behavior: 'smooth' });
-        }
-    </script>
-        <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
