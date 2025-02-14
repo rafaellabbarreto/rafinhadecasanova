@@ -3,11 +3,13 @@
 
 /* Apply styles to the whole page */
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #f5f5f5;
-    color: #333;
-    margin: 0;
-    padding: 0;
+font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('images/background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+            text-align: center;
 }
 
 /* Style the header */
