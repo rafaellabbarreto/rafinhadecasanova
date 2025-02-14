@@ -28,4 +28,19 @@ productsData.forEach(product => {
         </div>
     `;
     productList.appendChild(productElement);
-});
+  });
+};
+
+// Fix scrolling for navigation arrows
+function scrollLeft() {
+    document.getElementById("products").scrollBy({ left: -350, behavior: 'smooth' });
+}
+
+function scrollRight() {
+    document.getElementById("products").scrollBy({ left: 350, behavior: 'smooth' });
+}
+
+// Fix missing redirect function
+function redirectToPayment(productName) {
+    alert(`Você escolheu contribuir para: ${productName}`);
+}
