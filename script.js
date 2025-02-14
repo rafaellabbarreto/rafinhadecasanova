@@ -1,3 +1,13 @@
+window.onload = function () {
+    const productList = document.getElementById("products");
+
+    // Ensure the container exists before executing code
+    if (!productList) {
+        console.error("Error: 'products' container not found.");
+        return;
+    }
+
+
 const productsData = [
     { name: "Sofá Minimalista", image: "images/products/sofa.jpeg", price: 1500 },
     { name: "Decoração para o banheiro", image: "images/products/acessoriosbanheiro.jpeg", price: 300 },
