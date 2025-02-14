@@ -21,7 +21,6 @@ const productsData = [
     { name: "Talheres", image: "images/products/talheres.jpeg", price: 200 }
 ];
 
-const productList = document.getElementById("products");
 
 // Dynamically create product elements
 productsData.forEach(product => {
